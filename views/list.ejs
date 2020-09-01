@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>It's a <%= kindofDay %> </h1>                       <!-- will add marker that will tell file that here you need to place particular variable, and replace the variable with it's value when the page is rendered-->
+    <<%if(kindofDay==="Saturday"||kindofDay==="Sunday"){%>                    <!--adding scriplet tags(<%  %> ) around control flow statements,n part of our code which is not HTML-->
+        <h1 style="color:purple">It's a <%= kindofDay %> ToDo List </h1>                       <!-- will add marker that will tell file that here you need to place particular variable, and replace the variable with it's value when the page is rendered-->
+        <% }else{ %> 
+        <h1 style="color:green">It's a <%= kindofDay %> ToDo List </h1>  
+        <% } %>                       <!-- will add marker that will tell file that here you need to place particular variable, and replace the variable with it's value when the page is rendered-->
 </body>
 </html>
